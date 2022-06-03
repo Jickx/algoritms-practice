@@ -1,12 +1,9 @@
+from collections import Counter
+
 def find_match(l):
     """ [1, 1, 2, 3, 1, 3] -> [1, 3] """
-    seen, match = set(), []
-    for i in l:
-        if i in seen and i not in match:
-            match.append(i)
-        else:
-            seen.add(i)
-    return match
+    counted = Counter(l)
+    return [elem for elem, count in counted.items() if count > 1]
 
 assert find_match([1, 1, 2, 3, 1, 3]) == [1, 3]
 assert find_match([0, 1, 3]) == []
