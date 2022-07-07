@@ -12,8 +12,8 @@
 # is an integer within the range [-1,000,000,000..1,000,000,000].
 
 def solution(A):
-    pairs = sorted([i for i in A if -i in A])
-    return pairs[-1] if pairs else 0
+    pairs = [i for i in A if -i in A]
+    return max(pairs) if pairs else 0
 
 
 assert solution([3, 2, -2, 5, -3]) == 3
