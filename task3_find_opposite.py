@@ -12,7 +12,11 @@
 # is an integer within the range [-1,000,000,000..1,000,000,000].
 
 def solution(A):
-    pairs = [i for i in A if -i in A]
+    pairs = []
+    A = set(A)
+    for i in A:
+        if -i in A:
+            pairs.append(i)
     return max(pairs) if pairs else 0
 
 
