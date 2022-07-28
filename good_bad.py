@@ -1,6 +1,7 @@
 bad = ['a', 'b', 'c']
 good = ['good']
 
+
 def check_text(text):
     words = text.split()
     good_passed = False
@@ -13,6 +14,7 @@ def check_text(text):
         return 'passed'
     else:
         return 'not passed'
+
 
 assert check_text('a b c good') == 'not passed'
 assert check_text('a b bad') == 'not passed'

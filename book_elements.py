@@ -24,6 +24,7 @@ def find_top10(text):
         del(words_dict[max_k])
     return max_list
 
+
 text = """Вот дом,
 Который построил Джек.
 А это пшеница,

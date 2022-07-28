@@ -13,7 +13,7 @@
 
 def solution(A):
     pairs = []
-    A = set(A)
+    A = {i: None for i in A}
     for i in A:
         if -i in A:
             pairs.append(i)

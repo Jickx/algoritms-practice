@@ -5,10 +5,5 @@ def comb(list1, list2):
             list3.append((i, j))
     return list3
 
+
 print(comb({1, 2, 3}, [4, 5]))
-
-# Сделать на генераторе несколько списков
-# и фиббоначи
-
-
-
