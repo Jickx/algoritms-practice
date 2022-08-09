@@ -14,8 +14,12 @@
 
 
 def intersect(nums1: list[int], nums2: list[int]) -> list[int]:
-    dic_ctr1 = {i: nums1.count(i) for i in nums1}
-    dic_ctr2 = {i: nums2.count(i) for i in nums2}
+    dic_ctr1 = dict()
+    dic_ctr2 = dict()
+    for i in nums1:
+        dic_ctr1[i] = dic_ctr1.get(i, 0) + 1
+    for i in nums2:
+        dic_ctr2[i] = dic_ctr2.get(i, 0) + 1
     output = []
     for key in dic_ctr1:
         if key not in dic_ctr2:
